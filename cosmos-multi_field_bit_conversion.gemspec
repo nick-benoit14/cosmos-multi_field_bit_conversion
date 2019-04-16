@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "cosmos-multi_field_bit_conversion"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Nick Benoit"]
   spec.email         = ["nick.benoit14@gmail.com"]
   spec.description   = %q{Write a gem description}
