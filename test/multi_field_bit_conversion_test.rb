@@ -4,7 +4,7 @@ require 'test/unit'
 require 'pry'
 
 module Cosmos
-module MultiFieldBitConversion
+#module MultiFieldBitConversion
 class TestMultiFieldBitConversion < Test::Unit::TestCase
     def self.build_agg_packet
       packet = System.telemetry.packet('PI', 'TEST_3')
@@ -37,5 +37,5 @@ class TestMultiFieldBitConversion < Test::Unit::TestCase
       assert_equal conversion.converted_bit_size, 16
     end
 end
-end
+#end
 end

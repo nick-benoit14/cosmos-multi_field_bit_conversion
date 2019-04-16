@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cosmos/multi_field_bit_conversion/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "cosmos-multi_field_bit_conversion"
-  spec.version       = Cosmos::MultiFieldBitConversion::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["Nick Benoit"]
   spec.email         = ["nick.benoit14@gmail.com"]
   spec.description   = %q{Write a gem description}

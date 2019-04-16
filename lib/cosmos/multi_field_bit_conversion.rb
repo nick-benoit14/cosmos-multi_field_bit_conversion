@@ -1,8 +1,6 @@
 require "cosmos/conversions/conversion"
-require "cosmos/multi_field_bit_conversion/version"
 
 module Cosmos
-  module MultiFieldBitConversion
   class MultiFieldBitConversion < Conversion
     def initialize(*args)
       super()
@@ -24,6 +22,5 @@ module Cosmos
         shifted|packet.read(item.name)
       end
     end
-  end
   end
 end
