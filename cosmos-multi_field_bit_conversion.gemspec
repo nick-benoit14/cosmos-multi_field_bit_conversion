@@ -7,9 +7,10 @@ Gem::Specification.new do |spec|
   spec.version       = "0.0.2"
   spec.authors       = ["Nick Benoit"]
   spec.email         = ["nick.benoit14@gmail.com"]
-  spec.description   = %q{Write a gem description}
-  spec.summary       = %q{Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A cosmos read conversion designed to combine the bits of several uint fields.
+}
+  spec.summary       = %q{Combine cosmos uint fields of differing bit lengths where values on the left are more significant, and values on the right are less significant. This conversaion will work with any number of uint fields, of any size.}
+  spec.homepage      = "https://github.com/nick-benoit14/cosmos-multi_field_bit_conversion"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
