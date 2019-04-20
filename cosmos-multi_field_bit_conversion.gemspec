@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "cosmos-multi_field_bit_conversion"
-  spec.version       = "0.0.2"
+  spec.version       = "0.1.0"
   spec.authors       = ["Nick Benoit"]
   spec.email         = ["nick.benoit14@gmail.com"]
   spec.description   = %q{A cosmos read conversion designed to combine the bits of several uint fields.
