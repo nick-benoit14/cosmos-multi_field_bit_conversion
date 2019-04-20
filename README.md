@@ -1,6 +1,6 @@
 # Cosmos::MultiFieldBitConversion
 
-TODO: Write a gem description
+A cosmos read conversion designed to combine the bits of several uint fields. Where values on the left are more significant, and values on the right are less significant. This conversaion will work with any number of uint fields, of any size.
 
 ## Installation
 
@@ -18,7 +18,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your telemetry definition file: `config/targets/my-target/cmd_tlm/test.txt`
+```
+TELEMETRY PI TEST LITTLE_ENDIAN "Test Aggregate Packet"
+    APPEND_ID_ITEM TST_PK_ID 16 UINT 149 "Packet ID which must be 149"
+    APPEND_ITEM    VALUE_A    8   UINT
+    APPEND_ITEM    VALUE_B    8   UINT
+
+    ITEM  HEAD_LENGTH  32  16  UINT
+
+    APPEND_ITEM    VALUE_C    8   UINT
+    APPEND_ITEM    VALUE_D    8   UINT
+    ITEM BOTH_FIELDS 0 0 DERIVED "Description"
+      READ_CONVERSION cosmos/multi_field_bit_conversion.rb VALUE_C VALUE_D 
+
+    ## Both fields is essentially (VALUE_C << 8 | VALUE_D) 
+
+
+```
+
+In your target definition file `config/targets/my-target/target.txt`
+```
+REQUIRE cosmos/multi_field_bit_conversion.rb
+```
 
 ## Contributing
 
